@@ -2,15 +2,16 @@ package org.example;
 
 public class ExpressaoCodigoMorse implements InterpretadorExpressao {
     private String codigoMorse;
-    private ContextoCodigoMorse contexto;
+    private DefinicaoCodigoMorse definicao;
 
-    public ExpressaoCodigoMorse(String codigoMorse, ContextoCodigoMorse contexto) {
+    public ExpressaoCodigoMorse(String codigoMorse, DefinicaoCodigoMorse definicao) {
         this.codigoMorse = codigoMorse;
-        this.contexto = contexto;
+        this.definicao = definicao;
     }
 
     @Override
     public String interpretar() {
-        return contexto.obterTextoPorCodigoMorse(codigoMorse);
+        return definicao.obterTextoPorCodigoMorse(codigoMorse);
     }
 }
+
